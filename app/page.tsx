@@ -12,10 +12,11 @@ export default function Home() {
     formData.append("file", file)
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/analyze", {
-        method: "POST",
-        body: formData,
-      })
+      const response = await fetch("https://crack-detection-on-bridges.onrender.com/analyze", {
+  method: "POST",
+  body: formData
+})
+
 
       const data = await response.json()
       setResult(data)
